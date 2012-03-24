@@ -2,7 +2,7 @@
 <html lang="zh">
   <head>
     <meta charset="utf-8">
-    <title>Scaffolding · Twitter Bootstrap</title>
+    <title>流动布局框架 · Twitter Bootstrap</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -42,29 +42,29 @@
           <div class="nav-collapse">
             <ul class="nav">
               <li class="">
-                <a href="./index.html">Overview</a>
+                <a href="./index.html">总述</a>
               </li>
               <li class="active">
-                <a href="./scaffolding.html">Scaffolding</a>
+                <a href="./scaffolding.html">流动布局框架</a>
               </li>
               <li class="">
-                <a href="./base-css.html">Base CSS</a>
+                <a href="./base-css.html">基本CSS UI元素</a>
               </li>
               <li class="">
-                <a href="./components.html">Components</a>
+                <a href="./components.html">UI 部件</a>
               </li>
               <li class="">
-                <a href="./javascript.html">Javascript plugins</a>
+                <a href="./javascript.html">javascript UI库</a>
               </li>
               <li class="">
-                <a href="./less.html">Using LESS</a>
+                <a href="./less.html">在Bootstrap中应用LESS</a>
               </li>
               <li class="divider-vertical"></li>
               <li class="">
-                <a href="./download.html">Customize</a>
+                <a href="./download.html">自定义框架</a>
               </li>
               <li class="">
-                <a href="./examples.html">Examples</a>
+                <a href="./examples.html">快速案例</a>
               </li>
             </ul>
           </div>
@@ -77,11 +77,11 @@
       <!-- Masthead
       ================================================== -->
       <header class="jumbotron subhead" id="overview">
-        <h1>Scaffolding</h1>
-        <p class="lead">Bootstrap is built on a responsive 12-column grid. We've also included fixed- and fluid-width layouts based on that system.</p>
+        <h1>流动布局框架</h1>
+        <p class="lead">Bootstrap的布局框架以响应式12列网格为基础，当然也可以在其上应用固定或流动的像素宽度布局。</p>
         <div class="subnav">
           <ul class="nav nav-pills">
-            <li><a href="#global">Global styles</a></li>
+            <li><a href="#global">全局定义</a></li>
             <li><a href="#gridSystem">Grid system</a></li>
             <li><a href="#fluidGridSystem">Fluid grid system</a></li>
             <li><a href="#gridCustomization">Customizing</a></li>
@@ -98,12 +98,12 @@
 ================================================== -->
 <section id="global">
   <div class="page-header">
-    <h1>Global styles <small>for CSS reset, typography, and links</small></h1>
+    <h1>全局定义<small>CSS 重置，排版，链接</small></h1>
   </div>
   <div class="row">
     <div class="span4">
-      <h2>Requires HTML5 doctype</h2>
-      <p>Bootstrap makes use of HTML elements and CSS properties that require the use of the HTML5 doctype. Be sure to include it at the beginning of every Bootstrapped page in your project.</p>
+      <h2>1. 定义 HTML5 文档类型声明</h2>
+      <p>Bootstrap 使用 HTML5 和 CSS3 技术所以需要 <code>&lt;!DOCTYPE html&gt;</code> 声明，确保在每个应用 Bootstrap 框架的页面都有这个声明。</p>
 <pre class="prettyprint linenums">
 &lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
@@ -112,19 +112,19 @@
 </pre>
     </div><!-- /.span -->
     <div class="span4">
-      <h2>Typography and links</h2>
-      <p>Within the <strong>scaffolding.less</strong> file, we set basic global display, typography, and link styles. Specifically, we:</p>
+      <h2>排版及链接</h2>
+      <p>通过修改 <strong>scaffolding.less</strong> 文件,可以修改布局参数，链接参数，默认的一些定义如下：</p>
       <ul>
-        <li>Remove margin on the body</li>
-        <li>Set <code>background-color: white;</code> on the <code>body</code></li>
-        <li>Use the <code>@baseFontFamily</code>, <code>@baseFontSize</code>, and <code>@baseLineHeight</code> attributes as our typographyic base</li>
-        <li>Set the global link color via <code>@linkColor</code> and apply link underlines only on <code>:hover</code></li>
+        <li>移除&lt;html&gt;的外边距</li>
+        <li>在 <code>body</code>上 <code>background-color: white;</code></li>
+        <li>设置 <code>@baseFontFamily</code> , <code>@baseFontSize</code> , and <code>@baseLineHeight</code> 变量作为我们排版的基础变量</li>
+        <li>通过 <code>@linkColor</code> 变量设置全局链接的颜色，并且链接只有在 <code>:hover</code> 状态下显示下划线</li>
       </ul>
     </div><!-- /.span -->
     <div class="span4">
-      <h2>Reset via Normalize</h2>
-      <p>As of Bootstrap 2, the traditional CSS reset has evolved to make use of elements from <a href="http://necolas.github.com/normalize.css/" target="_blank">Normalize.css</a>, a project by <a href="http://twitter.com/necolas" target="_blank">Nicolas Gallagher</a> that also powers the <a href="http://html5boilerplate.com" target="_blank">HTML5 Boilerplate</a>.</p>
-      <p>The new reset can still be found in <strong>reset.less</strong>, but with many elements removed for brevity and accuracy.</p>
+      <h2>通过<a href="http://necolas.github.com/normalize.css/" target="_blank">Normalize.css</a>重置浏览器默认样式</h2>
+      <p>从 Bootstrap 2开始, <a href="http://necolas.github.com/normalize.css/" target="_blank">Normalize.css</a> 取代了传统的CSS样式表, 这是 <a href="http://twitter.com/necolas" target="_blank">Nicolas Gallagher</a> 的项目， <a href="http://html5boilerplate.com" target="_blank">HTML5 Boilerplate</a> 同样也是他的项目之一。</p>
+      <p>新的样式表保存于 <strong>reset.less</strong> 文件,移除一些元素后，它更加简洁并准确。</p>
     </div><!-- /.span -->
   </div><!-- /.row -->
 </section>
@@ -136,7 +136,7 @@
 ================================================== -->
 <section id="gridSystem">
   <div class="page-header">
-    <h1>Default grid system <small>12 columns with a responsive twist</small></h1>
+    <h1>默认网格系统 <small>12竖列构成的可调整可响应结构</small></h1>
   </div>
 
   <div class="row show-grid">
@@ -171,7 +171,7 @@
   </div>
   <div class="row">
     <div class="span4">
-      <p>The default grid system provided as part of Bootstrap is a <strong>940px-wide, 12-column grid</strong>.</p>
+      <p>Bootstrap 默认提供的网格系统是 <strong>940px-宽, 12-列</strong>的网格。</p>
       <p>It also has four responsive variations for various devices and resolutions: phone, tablet portrait, table landscape and small desktops, and large widescreen desktops.</p>
     </div><!-- /.span -->
     <div class="span4">
