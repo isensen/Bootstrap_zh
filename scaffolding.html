@@ -252,10 +252,10 @@
 ================================================== -->
 <section id="fluidGridSystem">
   <div class="page-header">
-    <h1>Fluid grid system <small>12 responsive, percent-based columns</small></h1>
+    <h1>流动网格系统 <small>12个按照百分比响应宽度的列</small></h1>
   </div>
 
-  <h2>Fluid columns</h2>
+  <h2>流动列</h2>
   <div class="row-fluid show-grid">
     <div class="span1">1</div>
     <div class="span1">1</div>
@@ -289,12 +289,12 @@
 
   <div class="row">
     <div class="span4">
-      <h3>Percents, not pixels</h3>
-      <p>The fluid grid system uses percents for column widths instead of fixed pixels. It also has the same responsive variations as our fixed grid system, ensuring proper proportions for key screen resolutions and devices.</p>
+      <h3>使用百分比计算定义宽度，而不是像素</h3>
+      <p>流动网格系统使用百分比为列定义宽度而不是以往的固定像素定义宽度。确保适当的比例以适应一些关键的分辨率和设备。</p>
     </div><!-- /.span -->
     <div class="span4">
-      <h3>Fluid rows</h3>
-      <p>Make any row fluid simply by changing <code>.row</code> to <code>.row-fluid</code>. The columns stay the exact same, making it super straightforward to flip between fixed and fluid layouts.</p>
+      <h3>流动行</h3>
+      <p>可流动行与非流动行的差别仅仅是<code>.row</code> 与 <code>.row-fluid</code>.当然，流动列与非流动列之间的区别也是一样的，这是最简单直接的方法。</p>
     </div><!-- /.span -->
     <div class="span4">
       <h3>Markup</h3>
@@ -307,10 +307,10 @@
     </div><!-- /.span -->
   </div><!-- /.row -->
 
-  <h2>Fluid nesting</h2>
+  <h2>流动嵌套</h2>
   <div class="row">
     <div class="span6">
-      <p>Nesting with fluid grids is a bit different: the number of nested columns doesn't need to match the parent. Instead, your columns are reset at each level because each row takes up 100% of the parent column.</p>
+      <p>嵌套一个流动网格有一点不一样的地方: 嵌套在其中的列其和无需等于其父列。换句话说，嵌套在其中的列会重置其百分比宽度因为他们会占用100%的父列。</p>
       <div class="row-fluid show-grid">
         <div class="span12">
           Fluid 12
@@ -348,51 +348,51 @@
 ================================================== -->
 <section id="gridCustomization">
   <div class="page-header">
-    <h1>Grid customization</h1>
+    <h1>网格系统的定义</h1>
   </div>
   <table class="table table-bordered table-striped">
     <thead>
       <tr>
-        <th>Variable</th>
-        <th>Default value</th>
-        <th>Description</th>
+        <th>变量</th>
+        <th>默认值</th>
+        <th>描述</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><code>@gridColumns</code></td>
         <td>12</td>
-        <td>Number of columns</td>
+        <td>列的数量</td>
       </tr>
       <tr>
         <td><code>@gridColumnWidth</code></td>
         <td>60px</td>
-        <td>Width of each column</td>
+        <td>每一列的宽度</td>
       </tr>
       <tr>
         <td><code>@gridGutterWidth</code></td>
         <td>20px</td>
-        <td>Negative space between columns</td>
+        <td>列之间的宽度</td>
       </tr>
       <tr>
         <td><code>@siteWidth</code></td>
-        <td><em>Computed sum of all columns and gutters</em></td>
+        <td><em>所有列和之间空白的宽度和</em></td>
         <td>Counts number of columns and gutters to set width of the <code>.container-fixed()</code> mixin</td>
       </tr>
     </tbody>
   </table>
   <div class="row">
     <div class="span4">
-      <h3>Variables in LESS</h3>
-      <p>Built into Bootstrap are a handful of variables for customizing the default 940px grid system, documented above. All variables for the grid are stored in variables.less.</p>
+      <h3>应用于LESS 中的变量</h3>
+      <p>Bootstrap使用少量的变量来定义默认的940px网格系统，如上所述。所有的网格定义变量保存在variables.less文件中。</p>
     </div><!-- /.span -->
     <div class="span4">
-      <h3>How to customize</h3>
-      <p>Modifying the grid means changing the three <code>@grid*</code> variables and recompiling Bootstrap. Change the grid variables in variables.less and use one of the <a href="less.html#compiling">four ways documented to recompile</a>. If you're adding more columns, be sure to add the CSS for those in grid.less.</p>
+      <h3>如何自定义网格变量</h3>
+      <p>定义网格系统意味着改变三个 <code>@grid*</code>并且重新编译 Bootstrap。修改variables.less文件中的网格变量而后下面四种之一的方式重新编译<a href="less.html#compiling">四种方式重新编译Bootstrap</a>。在添加更多的列之前，先要在grid.less中为他们添加CSS定义。</p>
     </div><!-- /.span -->
     <div class="span4">
-      <h3>Staying responsive</h3>
-      <p>Customization of the grid only works at the default level, the 940px grid. To maintain the responsive aspects of Bootstrap, you'll also have to customize the grids in responsive.less.</p>
+      <h3>保持响应</h3>
+      <p>网格的设置仅仅在默认的940px像素下有效。为了维护项目的高响应性，你也需要在responsive.less文件中定义网格变量。</p>
     </div><!-- /.span -->
   </div><!-- /.row -->
 
@@ -404,13 +404,13 @@
 ================================================== -->
 <section id="layouts">
   <div class="page-header">
-    <h1>Layouts <small>Basic templates to create webpages</small></h1>
+    <h1>布局模板 <small>从基本的模板开始构建网页</small></h1>
   </div>
 
   <div class="row">
     <div class="span6">
-      <h2>Fixed layout</h2>
-      <p>The default and simple 940px-wide, centered layout for just about any website or page provided by a single <code>&lt;div class="container"&gt;</code>.</p>
+      <h2>固定布局</h2>
+      <p>所有的内容在一个940px宽，居中对齐<code>&lt;div class="container"&gt;</code>的容器中。</p>
       <div class="mini-layout">
         <div class="mini-layout-body"></div>
       </div>
@@ -423,8 +423,8 @@
 </pre>
     </div><!-- /.span -->
     <div class="span6">
-      <h2>Fluid layout</h2>
-      <p><code>&lt;div class="container-fluid"&gt;</code> gives flexible page structure, min- and max-widths, and a left-hand sidebar. It's great for apps and docs.</p>
+      <h2>固定布局</h2>
+      <p><code>&lt;div class="container-fluid"&gt;</code>容器提供了流动性结构，最大和最小宽度一个左边栏，这是为创建应用和文档而定义的。</p>
       <div class="mini-layout fluid">
         <div class="mini-layout-sidebar"></div>
         <div class="mini-layout-body"></div>
