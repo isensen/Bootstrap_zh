@@ -82,11 +82,11 @@
         <div class="subnav">
           <ul class="nav nav-pills">
             <li><a href="#global">全局定义</a></li>
-            <li><a href="#gridSystem">Grid system</a></li>
-            <li><a href="#fluidGridSystem">Fluid grid system</a></li>
-            <li><a href="#gridCustomization">Customizing</a></li>
-            <li><a href="#layouts">Layouts</a></li>
-            <li><a href="#responsive">Responsive design</a></li>
+            <li><a href="#gridSystem">默认网格系统</a></li>
+            <li><a href="#fluidGridSystem">流动网格系统</a></li>
+            <li><a href="#gridCustomization">网格系统的定义</a></li>
+            <li><a href="#layouts">布局模板</a></li>
+            <li><a href="#responsive">响应式设计</a></li>
           </ul>
         </div>
       </header>
@@ -452,58 +452,58 @@
 ================================================== -->
 <section id="responsive">
   <div class="page-header">
-    <h1>Responsive design <small>Media queries for various devices and resolutions</small></h1>
+    <h1>响应式设计 <small>使用Media queries技术以创建应用于各种设备的响应式设计</small></h1>
   </div>
   <!-- Supported devices -->
   <div class="row">
     <div class="span4">
       <p><img src="assets/img/responsive-illustrations.png" alt="Responsive devices"></p>
-      <h3>What they do</h3>
-      <p>Media queries allow for custom CSS based on a number of conditions&mdash;ratios, widths, display type, etc&mdash;but usually focuses around <code>min-width</code> and <code>max-width</code>.</p>
+      <h3>为什么要使用Media queries</h3>
+      <p>Media queries技术可以使CSS基于一些条件改变CSS定义，例如比例，宽度，设备类型等等。不过大部分会基于两个变量改变， <code>min-width</code> 和 <code>max-width</code>。</p>
       <ul>
-        <li>Modify the width of column in our grid</li>
-        <li>Stack elements instead of float wherever necessary</li>
-        <li>Resize headings and text to be more appropriate for devices</li>
+        <li>重定义网格系统中列的宽度</li>
+        <li>使网页元素堆叠在一起而不是任其浮动</li>
+        <li>调整标题及文本的大小改变以更适应设备分辨率</li>
       </ul>
-      <p>Use media queries responsibly and only as a start to your mobile audiences. For larger projects, do consider dedicated code bases and not layers of media queries.</p>
+      <p>谨慎的使用Media queries技术并且将其作为一个开端，为移动平台客户服务的开端。而对于大型项目，我们建议您为移动平台的用户考虑应用更专业的前端框架。</p>
     </div><!-- /.span -->
     <div class="span8">
-      <h2>Supported devices</h2>
-      <p>Bootstrap supports a handful of media queries in a single file to help make your projects more appropriate on different devices and screen resolutions. Here's what's included:</p>
+      <h2>Bootstrap所支持的设备</h2>
+      <p>Bootstrap支持如下5种类型的设备</p>
       <table class="table table-bordered table-striped">
         <thead>
           <tr>
-            <th>Label</th>
-            <th>Layout width</th>
-            <th>Column width</th>
-            <th>Gutter width</th>
+            <th>类型</th>
+            <th>布局宽度</th>
+            <th>列宽度</th>
+            <th>缝隙宽度</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td>Smartphones</td>
+            <td>智能手机</td>
             <td>480px and below</td>
             <td class="muted" colspan="2">Fluid columns, no fixed widths</td>
           </tr>
           <tr>
-            <td>Smartphones to tablets</td>
+            <td>介于智能手机与平板电脑之间</td>
             <td>767px and below</td>
             <td class="muted" colspan="2">Fluid columns, no fixed widths</td>
           </tr>
           <tr>
-            <td>Portrait tablets</td>
+            <td>平板电脑</td>
             <td>768px and above</td>
             <td>42px</td>
             <td>20px</td>
           </tr>
           <tr>
-            <td>Default</td>
+            <td>默认</td>
             <td>980px and up</td>
             <td>60px</td>
             <td>20px</td>
           </tr>
           <tr>
-            <td>Large display</td>
+            <td>高分辨率显示器</td>
             <td>1200px and up</td>
             <td>70px</td>
             <td>30px</td>
@@ -511,8 +511,8 @@
         </tbody>
       </table>
 
-      <h3>Requires meta tag</h3>
-      <p>To ensure devices display responsive pages properly, include the viewport meta tag.</p>
+      <h3>加入必要的 meta 标签</h3>
+      <p>为确保页面具有适当的可响应性，在 meta 标签内加入 viewport 属性。</p>
       <pre class="prettyprint linenums">&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</pre>
     </div><!-- /.span -->
   </div><!-- /.row -->
@@ -520,16 +520,16 @@
   <br>
 
   <!-- Media query code -->
-  <h2>Using the media queries</h2>
+  <h2>如何使用 media queries 技术</h2>
   <div class="row">
     <div class="span4">
-      <p>Bootstrap doesn't automatically include these media queries, but understanding and adding them is very easy and requires minimal setup. You have a few options for including the responsive features of Bootstrap:</p>
+      <p>Bootstrap并不会自动的应用 media queries 技术，不过应用他们确实十分的简单，只需三个步骤即可添加响应式特性：</p>
       <ol>
-        <li>Use the compiled responsive version, bootstrap-responsive.css</li>
-        <li>Add @import "responsive.less" and recompile Bootstrap</li>
-        <li>Modify and recompile responsive.less as a separate file</li>
+        <li>使用编译过的bootstrap-responsive.css文件</li>
+        <li>添加@import "responsive.less"并重编译 Bootstrap</li>
+        <li>定义并重编译responsive.less文件</li>
       </ol>
-      <p><strong>Why not just include it?</strong> Truth be told, not everything needs to be responsive. Instead of encouraging developers to remove this feature, we figure it best to enable it.</p>
+      <p><strong>为什么不直接修改它呢？</strong>并不是所有的内容都需要应用 media queries 技术。这样做更易于移除 media queries 特性。</p>
     </div><!-- /.span -->
     <div class="span8">
 <pre class="prettyprint linenums">
@@ -550,18 +550,18 @@
   <br>
 
   <!-- Responsive utility classes -->
-  <h2>Responsive utility classes</h2>
+  <h2>应用于的响应式设计的CSS类</h2>
   <div class="row">
     <div class="span4">
-      <h3>What are they</h2>
-      <p>For faster mobile-friendly development, use these basic utility classes for showing and hidding content by device.</p>
-      <h3>When to use</h2>
-      <p>Use on a limited basis and avoid creating entirely different versions of the same site. Instead, use them to complement each device's presentation.</p>
-      <p>For example, you might show a <code>&lt;select&gt;</code> element for nav on mobile layouts, but not on tablets or desktops.</p>
+      <h3>是什么?</h3>
+      <p>为了更快的开发移动设备上的应用，使用这些CSS类控制内容在不同设备上显示与否。</p>
+      <h3>怎么使用呢？</h2>
+      <p>使用这些CSS类，可以利用基本的内容来创建完全不同的版本。</p>
+      <p>例如,可以显示在手机上显示<code>&lt;select&gt;</code>元素作为导航栏，但是在显示器上确不显示它。</p>
     </div><!-- /.span -->
     <div class="span8">
-      <h3>Support classes</h3>
-      <p>Shown here is a table of the classes we support and their effect on a given media query layout (labeled by device). They can be found in <code>responsive.less</code>.</p>
+      <h3>支持的类</h3>
+      <p>如下所示的表展示了所支持的类，及他们会产生的效果。在<code>responsive.less</code>文件中可以修改他们的具体定义。</p>
       <table class="table table-bordered table-striped responsive-utilities">
         <thead>
           <tr>
@@ -610,15 +610,15 @@
           </tr>
         </tbody>
       </table>
-      <h3>Test case</h3>
-      <p>Resize your browser or load on different devices to test the above clases.</p>
-      <h4>Visible on...</h4>
+      <h3>测试</h3>
+      <p>调整浏览器窗口大小或是在不同的设备上载入此页面以测试这些类。</p>
+      <h4>在当下的分辨率设备上显示的类...</h4>
       <ul class="responsive-utilities-test">
         <li>Phone<span class="visible-phone">&#10004; Phone</span></li>
         <li>Tablet<span class="visible-tablet">&#10004; Tablet</span></li>
         <li>Desktop<span class="visible-desktop">&#10004; Desktop</span></li>
       </ul>
-      <h4>Hidden on...</h4>
+      <h4>在当下的分辨率设备上隐藏的类...</h4>
       <ul class="responsive-utilities-test hidden-on">
         <li>Phone<span class="hidden-phone">&#10004; Phone</span></li>
         <li>Tablet<span class="hidden-tablet">&#10004; Tablet</span></li>
