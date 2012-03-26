@@ -2,7 +2,7 @@
 <html lang="zh">
   <head>
     <meta charset="utf-8">
-    <title>Base · Twitter Bootstrap</title>
+    <title>基本CSS UI元素 · Twitter Bootstrap</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -42,29 +42,29 @@
           <div class="nav-collapse">
             <ul class="nav">
               <li class="">
-                <a href="./index.html">Overview</a>
+                <a href="./index.html">总述</a>
               </li>
               <li class="">
-                <a href="./scaffolding.html">Scaffolding</a>
+                <a href="./scaffolding.html">流动布局框架</a>
               </li>
               <li class="active">
-                <a href="./base-css.html">Base CSS</a>
+                <a href="./base-css.html">基本CSS UI元素</a>
               </li>
               <li class="">
-                <a href="./components.html">Components</a>
+                <a href="./components.html">UI部件</a>
               </li>
               <li class="">
-                <a href="./javascript.html">Javascript plugins</a>
+                <a href="./javascript.html">Javascript UI库</a>
               </li>
               <li class="">
-                <a href="./less.html">Using LESS</a>
+                <a href="./less.html">在Bootsrap中应用LESS</a>
               </li>
               <li class="divider-vertical"></li>
               <li class="">
-                <a href="./download.html">Customize</a>
+                <a href="./download.html">自定义框架</a>
               </li>
               <li class="">
-                <a href="./examples.html">Examples</a>
+                <a href="./examples.html">快速案例</a>
               </li>
             </ul>
           </div>
@@ -77,16 +77,16 @@
 <!-- Masthead
 ================================================== -->
 <header class="jumbotron subhead" id="overview">
-  <h1>Base CSS</h1>
-  <p class="lead">On top of the scaffolding, basic HTML elements are styled and enhanced with extensible classes to provide a fresh, consistent look and feel.</p>
+  <h1>基本CSS UI元素</h1>
+  <p class="lead">在流动布局框架一节，基本HTML元素已经被样式化并且通过CSS类被扩展，以用来提供始终如一的外观。</p>
   <div class="subnav">
     <ul class="nav nav-pills">
-      <li><a href="#typography">Typography</a></li>
-      <li><a href="#code">Code</a></li>
-      <li><a href="#tables">Tables</a></li>
-      <li><a href="#forms">Forms</a></li>
-      <li><a href="#buttons">Buttons</a></li>
-      <li><a href="#icons">Icons by Glyphicons</a></li>
+      <li><a href="#typography">排版</a></li>
+      <li><a href="#code">CSS代码</a></li>
+      <li><a href="#tables">表格</a></li>
+      <li><a href="#forms">表单</a></li>
+      <li><a href="#buttons">按钮</a></li>
+      <li><a href="#icons">图标</a></li>
     </ul>
   </div>
 </header>
@@ -96,20 +96,20 @@
 ================================================== -->
 <section id="typography">
   <div class="page-header">
-    <h1>Typography <small>Headings, paragraphs, lists, and other inline type elements</small></h1>
+    <h1>字体排版 <small>标题，段落，列表，等一些行内元素</small></h1>
   </div>
 
-  <h2>Headings &amp; body copy</h2>
+  <h2>标题 &amp; 正文</h2>
 
   <!-- Headings & Paragraph Copy -->
   <div class="row">
     <div class="span4">
-      <h3>Typographic scale</h3>
-      <p>The entire typographic grid is based on two Less variables in our variables.less file: <code>@baseFontSize</code> and <code>@baseLineHeight</code>. The first is the base font-size used throughout and the second is the base line-height.</p>
-      <p>We use those variables, and some math, to create the margins, paddings, and line-heights of all our type and more.</p>
+      <h3>排版缩放</h3>
+      <p>整个文字排版系统是根据两个在variables.less中的两个变量<code>@baseFontSize</code> 和 <code>@baseLineHeight</code>，第一个变量始终用于定义字体大小，第二个变量定义了基准的行高。</p>
+      <p>我们使用这些变量，通过一些运算来创建各种各样的外边距，内边距，行高。</p>
     </div>
     <div class="span4">
-      <h3>Example body text</h3>
+      <h3>正文示例</h3>
       <p>Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
       <p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec sed odio dui.</p>
     </div>
@@ -126,7 +126,7 @@
   </div>
 
   <!-- Misc Elements -->
-  <h2>Emphasis, address, and abbreviation</h2>
+  <h2>强调，地址，缩写</h2>
   <table class="table table-bordered table-striped">
     <thead>
       <tr>
@@ -141,7 +141,7 @@
           <code>&lt;strong&gt;</code>
         </td>
         <td>
-          For emphasizing a snippet of text with <strong>important</strong>
+          通过<strong>加粗</strong>强调文本
         </td>
         <td>
           <span class="muted">None</span>
@@ -152,7 +152,7 @@
           <code>&lt;em&gt;</code>
         </td>
         <td>
-          For emphasizing a snippet of text with <em>stress</em>
+          通过<em>倾斜</em>强调文本
         </td>
         <td>
           <span class="muted">None</span>
@@ -163,11 +163,11 @@
           <code>&lt;abbr&gt;</code>
         </td>
         <td>
-          Wraps abbreviations and acronyms to show the expanded version on hover
+          包含缩略词并在hover状态显示完整词
         </td>
         <td>
-          <p>Include optional <code>title</code> attribute for expanded text</p>
-          Use <code>.initialism</code> class for uppercase abbreviations.
+          <p>添加<code>title</code>属性来展示完整文本</p>
+          使用<code>.initialism</code>类来添加为大写缩略词
         </td>
       </tr>
       <tr>
@@ -178,7 +178,7 @@
           For contact information for its nearest ancestor or the entire body of work
         </td>
         <td>
-          Preserve formatting by ending all lines with <code>&lt;br&gt;</code>
+          为保护格式所有的地址行会添加<code>&lt;br&gt;</code>
         </td>
       </tr>
     </tbody>
@@ -186,7 +186,7 @@
 
   <div class="row">
     <div class="span4">
-      <h3>Using emphasis</h3>
+      <h3>U使用强调</h3>
       <p><a href="#">Fusce dapibus</a>, <strong>tellus ac cursus commodo</strong>, <em>tortor mauris condimentum nibh</em>, ut fermentum massa justo sit amet risus. Maecenas faucibus mollis interdum. Nulla vitae elit libero, a pharetra augue.</p>
       <p><strong>Note:</strong> Feel free to use <code>&lt;b&gt;</code> and <code>&lt;i&gt;</code> in HTML5, but their usage has changed a bit. <code>&lt;b&gt;</code> is meant to highlight words or phrases without conveying additional importance while <code>&lt;i&gt;</code> is mostly for voice, technical terms, etc.</p>
     </div>
